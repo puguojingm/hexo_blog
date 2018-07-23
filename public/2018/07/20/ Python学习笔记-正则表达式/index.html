@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://guojingpu.github.io">
   <title>Python学习笔记-正则表达式 | 蒲国敬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#8195;&amp;#8195; 正则表达式1.匹配一个范围：[ ] , [a-z] [0-9] [A-z0-9]例如：a[0-9]b -&amp;gt;  a1b,a2b,a8b,a9b…">
-<meta name="keywords" content="Python,正则表达式,哔哩哔哩">
+  <meta name="description" content="&amp;#8195;&amp;#8195; 正则表达式1.常用正则表达式符号和语法1、’.’ 匹配所有字符串，除\n以外2、‘-’ 表示范围[0-9]3、’*‘ 匹配前面的子表达式零次或多次。要匹配  字符，请使用 \\。4、’+’ 匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 +5、’\^’ 匹配字符串开头6、‘$’ 匹配字符串结尾 re7、’\’ 转义字符， 使后一个字符改变原来的意思，如果字符串">
+<meta name="keywords" content="Python,正则表达式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python学习笔记-正则表达式">
 <meta property="og:url" content="https://guojingpu.github.io/2018/07/20/ Python学习笔记-正则表达式/index.html">
 <meta property="og:site_name" content="蒲国敬的博客">
-<meta property="og:description" content="&amp;#8195;&amp;#8195; 正则表达式1.匹配一个范围：[ ] , [a-z] [0-9] [A-z0-9]例如：a[0-9]b -&amp;gt;  a1b,a2b,a8b,a9b…">
+<meta property="og:description" content="&amp;#8195;&amp;#8195; 正则表达式1.常用正则表达式符号和语法1、’.’ 匹配所有字符串，除\n以外2、‘-’ 表示范围[0-9]3、’*‘ 匹配前面的子表达式零次或多次。要匹配  字符，请使用 \\。4、’+’ 匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 +5、’\^’ 匹配字符串开头6、‘$’ 匹配字符串结尾 re7、’\’ 转义字符， 使后一个字符改变原来的意思，如果字符串">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-20T03:34:24.207Z">
+<meta property="og:updated_time" content="2018-07-20T11:29:01.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习笔记-正则表达式">
-<meta name="twitter:description" content="&amp;#8195;&amp;#8195; 正则表达式1.匹配一个范围：[ ] , [a-z] [0-9] [A-z0-9]例如：a[0-9]b -&amp;gt;  a1b,a2b,a8b,a9b…">
+<meta name="twitter:description" content="&amp;#8195;&amp;#8195; 正则表达式1.常用正则表达式符号和语法1、’.’ 匹配所有字符串，除\n以外2、‘-’ 表示范围[0-9]3、’*‘ 匹配前面的子表达式零次或多次。要匹配  字符，请使用 \\。4、’+’ 匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 +5、’\^’ 匹配字符串开头6、‘$’ 匹配字符串结尾 re7、’\’ 转义字符， 使后一个字符改变原来的意思，如果字符串">
   
     <link rel="alternative" href="/atom.xml" title="蒲国敬的博客" type="application/atom+xml">
   
@@ -54,15 +54,13 @@
 		  <h1 class="header-author"><a href="/">蒲国敬</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">个人博客</p>
+		<p class="header-subtitle">生活不止coding 还有诗和远方</p>
 		
 
 		<nav class="header-menu">
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -73,8 +71,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
     			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
@@ -84,7 +80,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/GuojingPu" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -114,11 +110,9 @@
 			  <h1 class="header-author js-header-author">蒲国敬</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>个人博客<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>生活不止coding 还有诗和远方<i class="icon icon-quo-right"></i></p>
 			
 			
-			
-				
 			
 				
 			
@@ -127,7 +121,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/GuojingPu" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -142,9 +136,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -180,7 +172,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>&#8195;&#8195;</p>
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h5 id="1-匹配一个范围：-a-z-0-9-A-z0-9"><a href="#1-匹配一个范围：-a-z-0-9-A-z0-9" class="headerlink" title="1.匹配一个范围：[ ] , [a-z] [0-9] [A-z0-9]"></a>1.匹配一个范围：[ ] , [a-z] [0-9] [A-z0-9]</h5><p>例如：<br>a[0-9]b -&gt;  a1b,a2b,a8b,a9b…</p>
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="1-常用正则表达式符号和语法"><a href="#1-常用正则表达式符号和语法" class="headerlink" title="1.常用正则表达式符号和语法"></a>1.常用正则表达式符号和语法</h3><p>1、’.’ 匹配所有字符串，除\n以外<br>2、‘-’ 表示范围[0-9]<br>3、’*‘ 匹配前面的子表达式零次或多次。要匹配 <em> 字符，请使用 \\</em>。<br>4、’+’ 匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 +<br>5、’\^’ 匹配字符串开头<br>6、‘$’ 匹配字符串结尾 re<br>7、’\’ 转义字符， 使后一个字符改变原来的意思，如果字符串中有字符 ‘ * ‘ 需要匹配，可以使用’ \* ‘或者字符集[ *] , re.findall(r’3*‘,’3*ds’)结果[‘3<em>‘]<br>8、’\</em>‘ 匹配前面的字符0次或多次re.findall(“ab*“,”cabc3abcbbac”)结果：[‘ab’, ‘ab’, ‘a’]<br>9、‘?’ 匹配前一个字符串0次或1次 re.findall(‘ab?’,’abcabcabcadf’)结果[‘ab’, ‘ab’, ‘ab’, ‘a’]<br>10、’{m}’ 匹配前一个字符m次 re.findall(‘cb{1}’,’bchbchcbfbcbb’)结果[‘cb’, ‘cb’]<br>11、’{n,m}’ 匹配前一个字符n到m次 re.findall(‘cb{2,3}’,’bchbchcbfbcbb’)结果[‘cbb’]<br>12、’\d’ 匹配数字，等于[0-9] re.findall(‘\d’,’电话:10086’)结果[‘1’, ‘0’, ‘0’, ‘8’, ‘6’]<br>13、’\D’ 匹配非数字，等于[^0-9] re.findall(‘\D’,’电话:10086’)结果[‘电’, ‘话’, ‘:’]<br>14、’\w’ 匹配字母和数字，等于[A-Za-z0-9] re.findall(‘\w’,’alex123,./;;;’)结果[‘a’, ‘l’, ‘e’, ‘x’, ‘1’, ‘2’, ‘3’]<br>15、’\W’ 匹配非英文字母和数字,等于[^A-Za-z0-9] re.findall(‘\W’,’alex123,./;;;’)结果[‘,’, ‘.’, ‘/‘, ‘;’, ‘;’, ‘;’]<br>16、’\s’ 匹配空白字符 re.findall(‘\s’,’3*ds \t\n’)结果[‘ ‘, ‘\t’, ‘\n’]<br>17、’\S’ 匹配非空白字符 re.findall(‘\s’,’3*ds \t\n’)结果[‘3’, ‘*‘, ‘d’, ‘s’]<br>18、’\A’ 匹配字符串开头<br>19、’\Z’ 匹配字符串结尾<br>20、’\b’ 匹配单词的词首和词尾，单词被定义为一个字母数字序列，因此词尾是用空白符或非字母数字符来表示的<br>21、’\B’ 与\b相反，只在当前位置不在单词边界时匹配<br>22、’( ?P\&lt;name>… )’ 分组，除了原有编号外再指定一个额外的别名。 re.search(“(?P\<province>[0-9]{4})(?P\<city>[0-9]{2})(?P\&lt;birthday>[0-9{8})”,”371481199306143242”).groupdict(“city”) 结果{‘province’: ‘3714’, ‘city’: ‘81’, ‘birthday’: ‘19930614’}<br>23、[ ] 是定义匹配的字符范围。比如 [a-zA-Z0-9] 表示相应位置的字符要匹配英文字符和数字。[\s*]表示空格或者*号。</city></province></p>
+<h3 id="2-常用的re函数"><a href="#2-常用的re函数" class="headerlink" title="2.常用的re函数"></a>2.常用的re函数</h3><p>re.match(pattern,string,flags=0)&#8195;&#8195;从字符串的起始位置匹配，如果起始位置匹配不成功的话，match()就返回none</p>
+<p>re.search(pattern,string,flags=0)&#8195;&#8195;扫描整个字符串并返回第一个成功的匹配</p>
+<p>re.findall(pattern,string,flags=0)&#8195;&#8195;找到RE匹配的所有字符串，并把他们作为一个列表返回</p>
+<p>re.finditer(pattern, string, flags=0)&#8195;&#8195;找到RE匹配的所有字符串，并把他们作为一个迭代器返回</p>
+<p>re.sub(pattern, repl, string, count=0, flags=0)#8195;&#8195;替换匹配到的字符串</p>
+<p>re.subn(pattern, repl, string, count=0, flags=0)#8195;&#8195;替换匹配到的字符串,并返回替换数量</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>未完待续…</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 
       
 
@@ -197,6 +206,16 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://pc59bkg3l.bkt.clouddn.com/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://pc59bkg3l.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.png">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -226,15 +245,22 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">正则表达式</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">哔哩哔哩</a>
-        		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -298,11 +324,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2018/07/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2018/07/20/AboutMe/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          AboutMe
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -319,6 +349,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式"><span class="toc-number">1.</span> <span class="toc-text">正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-常用正则表达式符号和语法"><span class="toc-number">1.1.</span> <span class="toc-text">1.常用正则表达式符号和语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-常用的re函数"><span class="toc-number">1.2.</span> <span class="toc-text">2.常用的re函数</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -384,8 +427,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -397,15 +438,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -431,10 +470,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">哔哩哔哩</a>
               </li>
             
             <div class="clearfix"></div>
@@ -480,38 +515,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
