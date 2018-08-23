@@ -42,7 +42,7 @@ BOOTSTRAP3 = {
 2.1-2.2参看[原文链接](https://segmentfault.com/a/1190000015098870)
 ### 2.3 设置登录页面样式
 --
-此处与文中不同，我的<font color=#DC143C>login.html</font>中的<font color=#DC143C>form</font>无法通过 <font color=#DC143C>{% bootstrap_form form %}</font>引种Bootstrap的样式.因此我的<font color=#DC143C>login.html</font>如下：
+此处与文中不同，我的<font color=#DC143C>login.html</font>中的<font color=#DC143C>form</font>无法通过`{% bootstrap_form form %}`引用Bootstrap的样式.因此我的<font color=#DC143C>login.html</font>如下：
 
 ```
 <!DOCTYPE html>
